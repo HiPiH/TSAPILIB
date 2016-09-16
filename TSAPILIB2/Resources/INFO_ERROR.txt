@@ -1,0 +1,101 @@
+Unspecified Errors
+ new InformationForError(){GENERIC_UNSPECIFIED
+ new InformationForError(){GENERIC_UNSPECIFIED_REJECTION
+
+    
+Operation errors
+
+GENERIC_OPERATION
+GENERIC_OPERATION_REJECTION This error indicate that the server has detected an error in the operation class, but that it is not one of the defined errors, or the server cannot be any more specific
+REQUEST_INCOMPATIBLE_WITH_OBJECT The request is not compatible with the object.
+DUPLICATE_INVOCATION  The invokeID violates X.208 or X.209 assignment rules.
+UNRECOGNIZED_OPERATION_REJECTION The operation is not defined in TSAPI.
+VALUE_OUT_OF_RANGE The parameter has a value that is not in the range defined for the server.
+OBJECT_NOT_KNOWN The parameter has a value that is not known to the server.
+INVALID_CALLING_DEVICE The calling device is not valid.
+INVALID_CALLED_DEVICE The called device is not valid.
+PRIVILEGE_VIOLATION_ON_SPECIFIED_DEVICE The request cannot be provided because the specified device is not authorized for the Service.
+INVALID_FORWARDING_DESTINATION The request cannot be provided because the forwarding destination device is not valid. 
+PRIVILEGE_VIOLATION_ON_CALLED_DEVICE The request cannot be provided because the called device is not authorized for the Service.
+PRIVILEGE_VIOLATION_ON_CALLING_DEVICE The request cannot be provided because the calling device is not authorized for the Service.
+INVALID_CSTA_CALL_IDENTIFIER The call identifier is not valid.
+INVALID_CSTA_DEVICE_IDENTIFIER The Device Identifier is not valid.
+INVALID_CSTA_CONNECTION_IDENTIFIER The Connection identifier is not valid.
+INVALID_DESTINATION The Service Request specified a destination that is not valid.
+INVALID_FEATURE The Service Request specified a feature that is not valid.
+INVALID_ALLOCATION_STATE The Service Request indicated an allocation condition that is not valid.
+INVALID_CROSS_REF_ID The Service Request specified a Cross-Reference Id that is not in use at this time.
+INVALID_OBJECT_TYPE The Service Request specified an object type that is outside the range of valid object types for the Service.
+SECURITY_VIOLATION The request violates a security requirement.
+
+
+
+
+State incompatibility errors
+
+GENERIC_STATE_INCOMPATIBILITY The server is unable to be any more specific. 
+INVALID_OBJECT_STATE The object is in the incorrect state for the Service. This general error value may be used when the server isn’t able to be any more specific.
+INVALID_CONNECTION_ID_FOR_ACTIVE_CALL The Connection identifier specified in the Active Call parameter of the request is not in the correct state.
+NO_ACTIVE_CALL The requested Service operates on an active call, but there is no active call.
+NO_HELD_CALL The requested Service operates on a held call, but the specified call is not in the Held state.
+NO_CALL_TO_CLEAR There is no call associated with the CSTA Connection identifier of the Clear Call request.
+NO_CONNECTION_TO_CLEAR There is no Connection for the CSTA Connection identifier specified as Connection To Be Cleared.
+NO_CALL_TO_ANSWER There is no call active for the CSTA Connection identifier specified as Call To Be Answered.
+NO_CALL_TO_COMPLETE There is no call active for the CSTA Connection identifier specified as Call To Be Completed.
+
+
+System resource availability errors
+
+
+GENERIC_SYSTEM_RESOURCE_AVAILABILITY The server is unable to be any more specific. 
+SERVICE_BUSY The Service is supported by the server, but is temporarily unavailable.
+RESOURCE_BUSY An internal resource is busy. There is high probability that the Service will succeed if retried.
+RESOURCE_OUT_OF_SERVICE The Service requires a resource that is Out Of Service. A Service Request that encounters this condition could initiate system problem determination actions (e.g. notification of the network administrator).
+NETWORK_BUSY The server sub-domain is busy.
+NETWORK_OUT_OF_SERVICE The server sub-domain is Out Of Service.
+OVERALL_MONITOR_LIMIT_EXCEEDED This request would exceed the server’s overall limit of monitors.
+CONFERENCE_MEMBER_LIMIT_EXCEEDED. This request would exceed the server’s limit on the number of members of a conference. 
+
+Subscribed resource availability errors
+
+GENERIC_SUBSCRIBED_RESOURCE_AVAILABILITY The server is unable to be any more specific.
+OBJECT_MONITOR_LIMIT_EXCEEDED This request would exceed the server’s limit of monitors for the specified object.
+EXTERNAL_TRUNK_LIMIT_EXCEEDED The limit of external trunks would be exceeded by this request.
+OUTSTANDING_REQUEST_LIMIT_EXCEEDED The limit of outstanding requests would be exceeded by this request.
+
+
+Performance management errors
+GENERIC_PERFORMANCE_MANAGEMENT The server is unable to be any more specific.
+PERFORMANCE_LIMIT_EXCEEDED A performance limit is exceeded.
+
+
+ errors
+UNSPECIFIED_SECURITY_ERROR The server is unable to be any more specific.
+SEQUENCE_NUMBER_VIOLATED This error indicates that the server has detected an error in the Sequence Number of the operation.
+TIME_STAMP_VIOLATED This error indicates that the server has detected an error in the Time Stamp of the operation.
+PAC_VIOLATED This error indicates that the server has detected an error in the PAC of the operation.
+SEAL_VIOLATED This error indicates that the server has detected an error in the Seal of the operation.
+
+
+CSTA Driver Interface Errors
+UNRECOGNIZED_APDU_REJECTION The given type of the APDU is not defined in the protocol.
+MISTYPED_APDU_REJECTION The structure of the APDU does not conform to the protocol.
+BADLY STRUCTURED_APDU_REJECTION APDU does not conform to X.208 or X.209 standard encoding.
+INITIATOR RELEASING_REJECTION The requester is not willing to do the invoked operation because it is about to release the stream.
+UNRECOGNIZED_LINKEDID_REJECTION There is no operation in progress with an invoke ID equal to the specified link ID.
+LINKED_RESPONSE_UNEXPECTED_REJECTION The invoked operation that the linked ID refers to is not a parent operation.
+UNEXPECTED_CHILD_OPERATION_REJECTION The linked ID refers to a parent operation that does not allow the invoked operation.
+MISTYPED_RESULT_REJECTION The type of the Result parameter does not conform to the protocol.
+UNRECOGNIZED_ERROR_REJECTION The reported error is not in the protocol definition.
+UNEXPECTED_ERROR_REJECTION The reported error is not one that the operation may report.
+
+MISTYPED_ARGUMENT_REJECTION
+MISTYPED_PARAMETER_REJECTION The type of a supplied error parameter is not consistent with the protocol specification
+
+TSAPI
+
+RESOURCE_LIMITATION_REJECTION  A Telephony Server or PBX Driver resource limitation prevents the system from processing the application request 
+ACS_HANDLE_TERMINATION_REJECTION
+SERVICE_TERMINATION_REJECTION
+REQUEST_TIMEOUT_REJECTION
+REQUESTS_ON_DEVICE_EXCEEDED_REJECTION
